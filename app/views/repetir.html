@@ -1,0 +1,32 @@
+<div ng-init="friends = [
+  {name:'John', age:25, gender:'boy'},
+  {name:'Jessie', age:30, gender:'girl'},
+  {name:'Johanna', age:28, gender:'girl'},
+  {name:'Joy', age:15, gender:'girl'},
+  {name:'Mary', age:28, gender:'girl'},
+  {name:'Peter', age:95, gender:'boy'},
+  {name:'Sebastian', age:50, gender:'boy'},
+  {name:'Erika', age:27, gender:'girl'},
+  {name:'Patrick', age:40, gender:'boy'},
+  {name:'Samantha', age:60, gender:'girl'}
+]">
+	<h2>ng-repeat</h2>
+	<div class="z-depth-1 container col s12 white">
+			<br>
+			Yo tengo {{friends.length}} amigos. Ellos son:
+			<div class="input-field col s8">
+	          	<label for="search">filtrar amigos..</label>
+				<input id="search" type="text" ng-model="q" class="validate">
+	        </div>
+			
+			<ul class="collection">
+				<li class="collection-item anima-item" ng-repeat="friend in friends | filter:q as results">
+					{{friend.name}} tiene {{friend.age}} años.
+				</li>
+				<li class="collection-item anima-item" ng-if="results.length == 0">
+			  		<strong>No se encontraron resultados ...</strong>
+				</li>
+			</ul>
+			<br>
+	</div>
+</div>

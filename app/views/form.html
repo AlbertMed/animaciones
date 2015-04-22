@@ -1,0 +1,23 @@
+<div ng-init="sitio='/'" >
+	<h2>ng-messeges</h2>
+	<div class="z-depth-1 container col s12 white">
+		<br>
+		<form name="miForm">  
+	      <div>
+
+	        <div class="input-field col s8">
+	          	<label for="search">Escribe una contraseña</label>
+				<input ng-model="psw" id="psw" name="psw" type="password" ng-model="q" class="validate" ng-minlength="5" ng-maxlength="10" required>
+	        </div>
+
+	        <div ng-messages="miForm.psw.$error" class="anima-mensajes" ng-messages-multiple>
+	          <div ng-message="required" class="anima-mensaje">Este campo es requerido</div>
+	          <div ng-message="minlength" class="anima-mensaje">Este campo debe contener mas de 5 caracteres</div>
+	          <div ng-message="maxlength" class="anima-mensaje">Este campo no debe tener mas de 10 caracteres</div>
+	        </div>
+	      </div>
+	    </form>
+	    <br>
+	    <br>
+	</div>
+</div>

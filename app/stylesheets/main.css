@@ -1,0 +1,118 @@
+body {
+  background: #efefef;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+nav .brand-logo {
+  padding-left: 2em;
+}
+
+/*importante a tomar en cuenta*/
+.contenedor {
+  position: relative;
+}
+
+/* animacion para ng-view */
+.paginas.ng-enter, .paginas.ng-leave {
+  width: 100%;
+  position:absolute;
+}
+
+/* animacion de entrada */
+.paginas.ng-enter {
+
+    animation: fadeInUp 1s;
+ 
+}
+
+/* animacion de salida */
+.paginas.ng-leave {
+
+    animation: fadeOutDown 1s;
+
+}
+
+/* animacion para ng-show/ng-hide */
+.muestra.ng-hide-add {
+
+    animation: fadeOut 0.5s;
+
+}
+
+.muestra.ng-hide-remove{
+    
+    animation: flipInX 1s;
+
+}
+
+
+/* animacion para ng-repeat */
+.anima-item.ng-move,
+.anima-item.ng-enter,
+.anima-item.ng-leave {
+  transition:all linear 0.5s;
+}
+
+.anima-item.ng-leave{
+  animation: lightSpeedOut 1s;
+}
+
+.anima-item.ng-enter{
+  animation: lightSpeedIn 1s;
+}
+
+
+/* animacion ng-if */
+
+.anima-if{
+  position: absolute;
+}
+
+.anima-if.ng-leave{
+  animation: fadeOutLeftBig 1s;
+}
+
+.anima-if.ng-enter{
+  animation: fadeInRightBig 1s;
+}
+
+/* animacion para ng-messeges */
+
+.anima-mensajes{
+  background-color: red;
+}
+
+.anima-mensajes.ng-active {
+    animation: flipInY 1s;
+}
+
+.anima-mensajes.ng-inactive {
+    animation:flipOutY 1s;
+}
+
+
+
+.anima-mensaje {
+    transition:all linear 0.5s;
+    color: white;
+}
+
+.anima-mensaje.ng-enter {
+    animation: flipInY 1s;
+}
+
+.anima-mensaje.ng-leave {
+    animation:fadeOut 1s;
+}
+
+
+
+
+
+
+
+

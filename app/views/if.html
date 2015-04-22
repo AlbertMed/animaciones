@@ -1,0 +1,23 @@
+<div ng-init="sitio='/form'">
+	<h2>ng-if</h2>
+	<div class="z-depth-1 container col s12 white">
+			<br>
+			<p>
+		    	<input type="checkbox" ng-model="checked" ng-init="checked=true"  id="caja" />
+		    	<label for="caja"> Activa</label>
+		    </p>
+			<br/>
+			¿Estas activo?:
+			<br>
+			<div class="contenedor align-center" >
+				<span ng-if="!checked" class="anima-if">
+				  No estoy Activo.
+				</span>
+				<span ng-if="checked" class="anima-if">
+				  Si estoy Activo.
+				</span>
+			</div>
+			<br>
+			<br>
+	</div>
+</div>
